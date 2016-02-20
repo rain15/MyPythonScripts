@@ -27,3 +27,35 @@ print(list(shelfFile.keys()))
 print(list(shelfFile.values()))
 
 shelfFile.close()
+
+import shutil #to copy, move, create, delete files and directories.
+
+shutil.copy('/usr/bin/test.py', '/Users/defaultuser')
+shutil.copy('/usr/bin/testdir', '/Users/defaultuser/testdir_backup')
+
+#delete files and directories - number of ways
+
+os.unlink('hello.txt')
+
+os.rmdir('/Users/Guest/MyPythonScripts') #removes directory only if it's empty
+
+import shutil
+shutil.rmtree('/Users/Guest/MyPythonScripts') #removes directory even if it has files in it.
+
+########################
+import os
+
+os.chdir('/Users/Guest/MyPythonScripts')
+
+for filename in os.listdir():
+    if (filename.endswith('.txt'):
+        #os.unlink(filename)
+        print(filename) # test this code worked before deleting all the files.
+
+
+# to send the files to trash bin just incase you want to recover them,
+#install send2trash module using pip module
+
+import send2trash
+send2trash.send2trash('.txt')
+        
