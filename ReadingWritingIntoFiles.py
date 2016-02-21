@@ -58,4 +58,16 @@ for filename in os.listdir():
 
 import send2trash
 send2trash.send2trash('.txt')
+
+#Walking a directory tree - say you want to get all files inside a folder that
+# has sub folders.
+import os
+
+for folderName, subfolders, filenames in os.walk('/Users/hemapillay/MyPythonScripts'):
+        print('The folder name is ' + folderName);
+        print('The subfolders are ' + str(subfolders))
+        print('The file names are ' + str(filenames))
+        
+
+        
         
