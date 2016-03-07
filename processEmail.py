@@ -1,5 +1,8 @@
 import smtplib
 
+# for gmail, Sign in using App Passwords by first creating an app password for your gmail account
+
+
 #conn = smtplib.SMTP('smtp.gmail.com', 587)
 conn = smtplib.SMTP('mail.gmx.com', 25) #465
 
